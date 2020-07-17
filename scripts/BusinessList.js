@@ -1,12 +1,13 @@
-import { businessObject } from "./BusinessProvider.js";
+import { businessObject, NYBusiness } from "./BusinessProvider.js";
 import { businessHTML } from "./Business.js";
 
 export const businessList = () => {
 
   let businessHTMLRepresentations = ""
-  
+  let businessHTMLRepresentationsNY = ""
   const contentTarget = document.querySelector(".container")
   const arrayOfbusiness = businessObject()
+  const arrayOfNYbusiness = NYBusiness()
  
 //   for (const businessObj of arrayOfbusiness) {
 //     businessHTMLRepresentations += businessHTML(businessObj)
@@ -17,17 +18,14 @@ export const businessList = () => {
   //   rockHtmlRepresentations += albumHTMLBuilder(albumObj)
   // }
 
-
   arrayOfbusiness.forEach(businessObj => businessHTMLRepresentations += businessHTML(businessObj))
+  arrayOfNYbusiness.forEach(businessObj => businessHTMLRepresentations += businessHTML(businessObj))
 
   contentTarget.innerHTML += `
     <article class="business__list">
     ${businessHTMLRepresentations}
+    ${businessHTMLRepresentationsNY}
     </article>
+    <div class="block"
   `
-
-
-
-
-
 }

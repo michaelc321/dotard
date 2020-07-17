@@ -114,3 +114,15 @@ const businesses = [
   export const businessObject = () => {
       return businesses.slice()
   }
+
+  export const NYBusiness = () => {
+    let businessArray = []
+    for (const businessObj of businesses){
+      if (businessObj.addressStateCode === "NY") {
+        businessArray.push(businessObj)
+      }
+    }
+    return businessArray
+  }
+
+//   export const businessNYFiltered = businesses.filter(businessObj => businessObj.addressStateCode === "NY")
