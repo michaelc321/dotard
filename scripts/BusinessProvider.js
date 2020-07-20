@@ -125,4 +125,10 @@ const businesses = [
     return businessArray
   }
 
-//   export const businessNYFiltered = businesses.filter(businessObj => businessObj.addressStateCode === "NY")
+  export const listingAgent = businesses.map(businessObj => ({
+      fullName: businessObj.purchasingAgent.nameFirst + " " + businessObj.purchasingAgent.nameLast,
+      company: businessObj.companyName,
+      phoneNumber: businessObj.phoneWork
+  }))
+
+//   export const NYBusiness = businesses.filter(businesses => businessObj.addressStateCode === "NY")
