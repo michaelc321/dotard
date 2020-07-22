@@ -132,3 +132,6 @@ const businesses = [
   }))
 
 //   export const NYBusiness = businesses.filter(businesses => businessObj.addressStateCode === "NY")
+// export const findBusiness = (busObj) => {
+//   return businesss.find(business => business.companyName === busObj)
+// }
